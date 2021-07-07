@@ -13,6 +13,7 @@
 		F7559FCA2695D66F00E57EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7559FC82695D66F00E57EE1 /* Main.storyboard */; };
 		F7559FCC2695D67100E57EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7559FCB2695D67100E57EE1 /* Assets.xcassets */; };
 		F7559FCF2695D67100E57EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7559FCD2695D67100E57EE1 /* LaunchScreen.storyboard */; };
+		F7559FD72696205400E57EE1 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7559FD62696205400E57EE1 /* CustomViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F7559FCB2695D67100E57EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7559FCE2695D67100E57EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7559FD02695D67100E57EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7559FD62696205400E57EE1 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F7559FC22695D66F00E57EE1 /* AppDelegate.swift */,
 				F7559FC42695D66F00E57EE1 /* SceneDelegate.swift */,
 				F7559FC62695D66F00E57EE1 /* ViewController.swift */,
+				F7559FD62696205400E57EE1 /* CustomViews.swift */,
 				F7559FC82695D66F00E57EE1 /* Main.storyboard */,
 				F7559FCB2695D67100E57EE1 /* Assets.xcassets */,
 				F7559FCD2695D67100E57EE1 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7559FC72695D66F00E57EE1 /* ViewController.swift in Sources */,
+				F7559FD72696205400E57EE1 /* CustomViews.swift in Sources */,
 				F7559FC32695D66F00E57EE1 /* AppDelegate.swift in Sources */,
 				F7559FC52695D66F00E57EE1 /* SceneDelegate.swift in Sources */,
 			);
