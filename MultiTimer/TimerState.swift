@@ -41,6 +41,5 @@ class TimerState {
         }
         ViewController.tableView.sort()
         ViewController.tableView.reloadData()
-        print("\(name):\(seconds)")
     }
 }

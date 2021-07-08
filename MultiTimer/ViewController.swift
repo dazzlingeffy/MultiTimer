@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     static let controller = ViewController()
     static var tableView: TimersTableView!
-//    var timers = [TimerState]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +30,8 @@ class ViewController: UIViewController {
         timerTextFields.center.x = self.view.center.x
         self.view.addSubview(timerTextFields)
         
-        // add timersSection header
+        // add timersSection header and tableView
         let timersHeaderMargin = titleFieldMargin + 220
-//        let timersHeader = HeaderView(frame: CGRect(x: 0, y: timersHeaderMargin, width: self.view.frame.width, height: 45), title: "Таймеры")
-//        self.view.addSubview(timersHeader)
-        
-        // add tableview
         ViewController.tableView = TimersTableView(frame: CGRect(x: 0, y: timersHeaderMargin , width: self.view.frame.width, height: UIScreen.main.bounds.height - timersHeaderMargin), style: UITableView.Style.grouped)
         self.view.addSubview(ViewController.tableView)
         

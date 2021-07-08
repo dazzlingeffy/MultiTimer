@@ -9,7 +9,6 @@ import UIKit
 
 class TimersTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     static let instance = TimersTableView()
-//    var timers = [TimerState]()
     static var timers = [TimerState]()
     var cell: TimersCell!
     
@@ -22,7 +21,6 @@ class TimersTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         self.tableHeaderView = HeaderView(frame: CGRect(x: 0, y: 0,
                                                         width: self.frame.width,
                                                         height: 44), title: "Таймеры")
-//        self.tableFooterView = UIView()
     }
     
     required init?(coder: NSCoder) {
@@ -53,7 +51,6 @@ class TimersTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         if TimersTableView.timers.count > 0 {
             TimersTableView.timers.removeLast()
         }
-        print(TimersTableView.timers)
         self.reloadData()
     }
     

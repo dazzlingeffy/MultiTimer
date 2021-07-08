@@ -118,7 +118,6 @@ class TimerTextFieldsView: UIView, UITextFieldDelegate {
         TimersTableView.timers.append(newTimer)
         ViewController.tableView.sort()
         ViewController.tableView.reloadData()
-        print("button tapped")
         titleField.text = ""
         secondsField.text = ""
     }
