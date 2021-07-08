@@ -8,12 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    static let controller = ViewController()
+//    var timers = [TimerState]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // add screen title
-        self.view.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
+        self.view.backgroundColor = .systemBackground
         let titleViewMargin: CGFloat = 80;
         let titleView = TitleView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: titleViewMargin))
         self.view.addSubview(titleView)
@@ -36,6 +37,8 @@ class ViewController: UIViewController {
         
         // add tableview
         let tableViewMargin = timersHeaderMargin + 45
+        let tableView = TimersTableView(frame: CGRect(x: 0, y: tableViewMargin, width: self.view.frame.width, height: 200), style: UITableView.Style.grouped)
+        self.view.addSubview(tableView)
         
     }
 

@@ -13,7 +13,9 @@
 		F7559FCA2695D66F00E57EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7559FC82695D66F00E57EE1 /* Main.storyboard */; };
 		F7559FCC2695D67100E57EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7559FCB2695D67100E57EE1 /* Assets.xcassets */; };
 		F7559FCF2695D67100E57EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7559FCD2695D67100E57EE1 /* LaunchScreen.storyboard */; };
-		F7559FD72696205400E57EE1 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7559FD62696205400E57EE1 /* CustomViews.swift */; };
+		F7559FDB269634AF00E57EE1 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7559FDA269634AF00E57EE1 /* CustomViews.swift */; };
+		F7559FDF269648C500E57EE1 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7559FDE269648C500E57EE1 /* TimerState.swift */; };
+		F7559FE126967A4C00E57EE1 /* TimersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7559FE026967A4C00E57EE1 /* TimersTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		F7559FCB2695D67100E57EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7559FCE2695D67100E57EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7559FD02695D67100E57EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7559FD62696205400E57EE1 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		F7559FDA269634AF00E57EE1 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		F7559FDE269648C500E57EE1 /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		F7559FE026967A4C00E57EE1 /* TimersTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				F7559FC22695D66F00E57EE1 /* AppDelegate.swift */,
 				F7559FC42695D66F00E57EE1 /* SceneDelegate.swift */,
 				F7559FC62695D66F00E57EE1 /* ViewController.swift */,
-				F7559FD62696205400E57EE1 /* CustomViews.swift */,
+				F7559FDA269634AF00E57EE1 /* CustomViews.swift */,
+				F7559FDE269648C500E57EE1 /* TimerState.swift */,
+				F7559FE026967A4C00E57EE1 /* TimersTableView.swift */,
 				F7559FC82695D66F00E57EE1 /* Main.storyboard */,
 				F7559FCB2695D67100E57EE1 /* Assets.xcassets */,
 				F7559FCD2695D67100E57EE1 /* LaunchScreen.storyboard */,
@@ -140,10 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7559FDF269648C500E57EE1 /* TimerState.swift in Sources */,
 				F7559FC72695D66F00E57EE1 /* ViewController.swift in Sources */,
-				F7559FD72696205400E57EE1 /* CustomViews.swift in Sources */,
+				F7559FDB269634AF00E57EE1 /* CustomViews.swift in Sources */,
 				F7559FC32695D66F00E57EE1 /* AppDelegate.swift in Sources */,
 				F7559FC52695D66F00E57EE1 /* SceneDelegate.swift in Sources */,
+				F7559FE126967A4C00E57EE1 /* TimersTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
