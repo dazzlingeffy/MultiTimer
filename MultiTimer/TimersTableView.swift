@@ -81,8 +81,8 @@ class TimersCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        nameLabel.frame = CGRect(x: 20, y: 0, width: self.frame.width / 2, height: 44)
-        timeLabel.frame = CGRect(x: self.frame.width / 2 + 80, y: 0, width: self.frame.width / 2, height: 44)
+        nameLabel.frame = CGRect(x: 20, y: 0, width: UIScreen.main.bounds.width / 2, height: 44)
+        timeLabel.frame = CGRect(x: UIScreen.main.bounds.width / 2 - 20, y: 0, width: UIScreen.main.bounds.width / 2, height: 44)
         timeLabel.textColor = UIColor.placeholderText
         timeLabel.textAlignment = NSTextAlignment.right
         contentView.addSubview(nameLabel)
