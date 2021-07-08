@@ -31,6 +31,7 @@ class TimerState {
         self.sec -= 1
         if (self.seconds == 0) {
             self.timer.invalidate()
+            ViewController.tableView.removeTimer()
         }
         if (self.sec < 0) {
             self.sec = 59
@@ -38,7 +39,8 @@ class TimerState {
                 self.min -= 1
             }
         }
-        TimersTableView.instance.reloadData()
+        ViewController.tableView.sort()
+        ViewController.tableView.reloadData()
         print("\(name):\(seconds)")
     }
 }

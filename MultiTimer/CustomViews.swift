@@ -60,7 +60,7 @@ class HeaderView: UIView {
     }
 }
 
-class TimerTextFieldsView: UIView {
+class TimerTextFieldsView: UIView, UITextFieldDelegate {
     var titleField = UITextField()
     var secondsField = UITextField()
     var addButton = UIButton()
@@ -79,12 +79,14 @@ class TimerTextFieldsView: UIView {
         titleField.placeholder = "Название таймера"
         titleField.font = UIFont.systemFont(ofSize: 14)
         titleField.borderStyle = UITextField.BorderStyle.roundedRect
+        titleField.delegate = self
         
         secondsField.frame = CGRect(x: 20, y: 50, width: 280, height: 30)
         secondsField.placeholder = "Время в секундах"
         secondsField.font = UIFont.systemFont(ofSize: 14)
         secondsField.borderStyle = UITextField.BorderStyle.roundedRect
-        secondsField.keyboardType = .decimalPad
+        secondsField.keyboardType = .numberPad
+        secondsField.delegate = self
         
         addButton.setTitle("Добавить", for: .normal)
         addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -95,15 +97,44 @@ class TimerTextFieldsView: UIView {
         addButton.frame = CGRect(x: 0, y: 110, width: self.frame.width, height: 80)
         addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        self.addGestureRecognizer(tap)
+        
         self.addSubview(titleField)
         self.addSubview(secondsField)
         self.addSubview(addButton)
     }
 
     @objc func addButtonTapped(sender: UIButton) {
+        if (titleField.isFirstResponder) {
+            titleField.resignFirstResponder()
+        } else {
+            secondsField.resignFirstResponder()
+        }
+        guard !(titleField.text == "") && !(secondsField.text == "") else {
+            return
+        }
         let newTimer = TimerState(name: titleField.text!, seconds: Int(secondsField.text!)!)
-        TimersTableView.instance.timers.append(newTimer)
+        TimersTableView.timers.append(newTimer)
+        ViewController.tableView.sort()
+        ViewController.tableView.reloadData()
         print("button tapped")
+        titleField.text = ""
+        secondsField.text = ""
+    }
+    
+    @objc func dismissKeyboard() {
+        self.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case titleField:
+            secondsField.becomeFirstResponder()
+            default:
+                secondsField.resignFirstResponder()
+            }
+        return true
     }
 }
 
